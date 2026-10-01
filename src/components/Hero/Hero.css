@@ -1,0 +1,1681 @@
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.hero {
+    width: 100%;
+
+    min-height: auto;
+
+    padding: 95px 9% 70px;
+
+    background: #111111;
+
+    color: #ffffff;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   HERO TOP
+========================================================= */
+.hero-top {
+    width: 100%;
+
+    position: relative;
+
+    min-height: 250px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: center;
+}
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.hero-content {
+    width: 100%;
+    text-align: center;
+    position: relative;
+left: 8%;
+    z-index: 5;
+}
+
+.hero-content h1 {
+    margin: 0;
+
+    color: #fffef0;
+
+    font-size: clamp(55px, 5.2vw, 82px);
+
+    font-weight: 800;
+
+    line-height: 0.98;
+
+    letter-spacing: -4px;
+}
+
+
+/* Yellow heading */
+
+.hero-content h1 span {
+    color: #ffd000;
+}
+
+
+/* =========================================================
+   LEFT CIRCLE
+========================================================= */
+
+.hero-circle {
+    width: 190px;
+    height: 190px;
+
+    position: absolute;
+
+    left: 2.5%;
+
+    top: 5px;
+
+    z-index: 10;
+}
+
+
+/* =========================================================
+CIRCLE TEXT - CONTINUOUS CURVE
+========================================================= */
+.circle-text-svg {
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    left: 0;
+    top: 0;
+
+    overflow: visible;
+}
+
+
+
+.circle-text-svg-content {
+    fill: #fffef0;
+
+    font-size: 18px;
+
+
+    font-weight: 600;
+
+    letter-spacing: 0.8px;
+
+    text-transform: uppercase;
+
+    font-family: inherit;
+}
+
+
+/* Hover par poora curved text neeche move hoga */
+
+.circle-text-svg:hover .circle-text-svg-content {
+    transform: translateY(18px);
+    cursor: pointer;
+}
+
+/* =========================================================
+CENTER DOWN ARROW
+========================================================= */
+
+.circle-arrow {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 50px;
+    height: 75px;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.circle-arrow svg {
+    width: 43px;
+    height: 68px;
+
+    display: block;
+
+    overflow: visible;
+}
+
+
+.circle-arrow svg line {
+    stroke: #fffef0;
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+}
+
+
+.circle-arrow svg path {
+    fill: none;
+
+    stroke: #fffef0;
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+}
+.hero-top-image {
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.hero-top-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+/* =========================================================
+   HERO BOTTOM
+========================================================= */
+
+.hero-bottom {
+    width: 100%;
+
+    margin-top: 20px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1.55fr 1fr;
+
+    gap: 32px;
+
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   LEFT / RIGHT COLUMN
+========================================================= */
+
+.hero-left,
+.hero-right {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   COMMON CARD
+========================================================= */
+.hero-card {
+    width: 100%;
+    min-height: 210px;
+
+    background: linear-gradient(
+        145deg,
+        #181818,
+        #0b0b0b
+    );
+
+    border: 2px solid #353535;
+
+    border-radius: 14px;
+
+    position: relative;
+    overflow: hidden;
+
+    /* 3D */
+    transform-style: preserve-3d;
+    perspective: 1000px;
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+
+    /* Depth */
+    box-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.45),
+        0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================
+   3D HOVER
+========================= */
+
+.hero-card:hover {
+    border-color: #777;
+
+    transform:
+        translateY(-10px)
+        rotateX(4deg)
+        rotateY(-4deg)
+        scale(1.02);
+
+    box-shadow:
+        0 15px 25px rgba(0, 0, 0, 0.5),
+        0 30px 60px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================
+   LIGHT EFFECT
+========================= */
+
+.hero-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: -50%;
+    left: -50%;
+
+    width: 200%;
+    height: 200%;
+
+    background: linear-gradient(
+        120deg,
+        transparent 35%,
+        rgba(255, 255, 255, 0.08) 50%,
+        transparent 65%
+    );
+
+    transform: translateX(-100%) rotate(25deg);
+
+    transition: transform 0.7s ease;
+
+    pointer-events: none;
+}
+
+
+/* Shine on hover */
+
+.hero-card:hover::before {
+    transform: translateX(100%) rotate(25deg);
+}
+
+
+/* =========================
+   INNER 3D CONTENT
+========================= */
+
+.hero-card > * {
+    position: relative;
+
+    z-index: 2;
+
+}
+
+.card-number {
+    display: inline-block;
+
+    font-size: 55px;
+    font-weight: 800;
+    line-height: 1;
+
+    color: #ffffff;
+
+    /* 3D Text */
+    text-shadow:
+        1px 1px 0 #555,
+        2px 2px 0 #444,
+        3px 3px 0 #333,
+        4px 4px 0 #222,
+        6px 8px 12px rgba(0, 0, 0, 0.7);
+
+    transform: translateZ(40px);
+
+    transition: all 0.4s ease;
+}
+
+/* Hover 3D Effect */
+.weekly-card:hover .card-number {
+    transform: translateZ(60px) translateY(-5px) rotateX(5deg);
+
+    color: #ffffff;
+
+    text-shadow:
+        1px 1px 0 #777,
+        3px 3px 0 #555,
+        5px 5px 0 #333,
+        7px 7px 0 #222,
+        10px 12px 20px rgba(180, 21, 255, 0.35);
+}
+
+
+/* =========================================================
+   WEEKLY CARD
+========================================================= */
+
+.weekly-card {
+    min-height: 210px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+
+/* =========================================================
+   TARGET ICON
+========================================================= */
+
+.target-icon {
+    width: 65px;
+    height: 65px;
+
+    margin-bottom: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* Outer target */
+
+.target-circle {
+    width: 48px;
+    height: 48px;
+
+    border: 3px solid #ffd000;
+
+    border-radius: 50%;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* Middle target */
+
+.target-circle::before {
+    content: "";
+
+    width: 28px;
+    height: 28px;
+
+    border: 3px solid #ffd000;
+
+    border-radius: 50%;
+
+    position: absolute;
+}
+
+
+/* Inner target */
+
+.target-dot {
+    width: 9px;
+    height: 9px;
+
+    background: #bc760d;
+
+    border-radius: 50%;
+
+    position: absolute;
+}
+
+
+/* Target arrow */
+
+.target-arrow {
+    position: absolute;
+
+    right: -8px;
+    top: -26px;
+
+    color: #ffd000;
+    font-size: 50px;
+    font-weight: 500;
+
+    transform-origin: bottom left;
+    transform: rotate(-10deg);
+
+    pointer-events: none;
+}
+/* =========================================================
+CARD NUMBER
+========================================================= */
+
+.card-number {
+    position: absolute;
+
+    top: 32px;
+    right: 22px;
+
+    color: #333333;
+
+    font-size: 42px;
+
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   CARD HEADING
+========================================================= */
+
+.hero-card h3 {
+    margin: 0 0 8px;
+
+    color: #ffffff;
+
+    font-size: 24px;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   CARD PARAGRAPH
+========================================================= */
+
+.hero-card p {
+    margin: 0;
+
+    color: #d0d0d0;
+
+    font-size: 17px;
+
+    font-weight: 400;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   STAT CARD
+========================================================= */
+
+.stat-card {
+    min-height: 134px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* Big number */
+
+.stat-card h2 {
+    margin: 0 0 3px;
+
+    color: #fffef0;
+
+    font-size: 43px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: -1px;
+}
+
+
+/* Stat text */
+
+.stat-card p {
+    color: #d0d0d0;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   CENTER IMAGE
+========================================================= */
+
+.hero-image {
+    width: 100%;
+
+    height: 460px;
+
+    border-radius: 0;
+
+    overflow: hidden;
+
+    position: relative;
+
+    background: #222222;
+}
+.hero-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: fill;
+    object-position: center;
+
+    transition: 0.5s ease;
+}
+
+
+/* =========================================================
+IMAGE 1
+========================================================= */
+
+.hero-image img.image-1 {
+    object-fit: fill;
+}
+
+
+/* =========================================================
+IMAGE 2
+========================================================= */
+
+.hero-image img.image-2 {
+    object-fit: fill;
+}
+
+
+/* =========================================================
+IMAGE 3
+========================================================= */
+
+.hero-image img.image-3 {
+    object-fit: fill;
+}
+
+
+/* =========================================================
+HAPPY CLIENT CARD
+========================================================= */
+
+.happy-card {
+    min-height: 85px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+}
+
+
+/* Client images */
+
+.client-images {
+    display: flex;
+
+    align-items: center;
+}
+
+
+/* Individual client */
+
+.client-circle {
+    width: 62px;
+    height: 62px;
+
+    margin-left: -13px;
+
+    border: 3px solid #111111;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    background: #ffd000;
+}
+
+
+.client-circle:first-child {
+    margin-left: 0;
+}
+
+
+.client-circle img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* Happy Client text */
+
+.happy-card > span {
+    color: #ffffff;
+
+    font-size: 16px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   HERO GET IN TOUCH
+========================================================= */
+
+.hero-get-touch {
+    width: max-content;
+
+    min-width: 190px;
+
+    height: 58px;
+
+    padding: 7px 8px 7px 28px;
+
+    background: #ffd000;
+
+    color: #000000;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 18px;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+
+.hero-get-touch:hover {
+    background: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+/* Hero button arrow */
+
+.hero-arrow {
+    width: 44px;
+    height: 44px;
+
+    background: #050505;
+
+    color: #ffd000;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 24px;
+
+    line-height: 1;
+}
+
+.hero > * {
+    position: relative !important;
+    z-index: 99999 !important;
+}
+
+.hero-top {
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+/* =========================================================
+   HERO RESPONSIVE
+========================================================= */
+
+
+/* =========================================================
+   TABLET
+   1024px AND BELOW
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .hero {
+        padding: 75px 5% 60px;
+    }
+
+
+    /* =========================
+       HERO TOP
+    ========================= */
+
+    .hero-top {
+        min-height: 230px;
+
+        align-items: center;
+    }
+
+
+    /* =========================
+       MAIN HEADING
+    ========================= */
+
+    .hero-content {
+        left: 0;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(48px, 7vw, 68px);
+
+        letter-spacing: -3px;
+    }
+
+
+    /* =========================
+       LEFT CIRCLE
+    ========================= */
+
+    .hero-circle {
+        width: 160px;
+        height: 160px;
+
+        left: -10px;
+        top: 0;
+    }
+
+    .circle-text-svg {
+        width: 160px;
+        height: 160px;
+    }
+
+    .circle-text-svg-content {
+        font-size: 15px;
+        letter-spacing: 0.6px;
+    }
+
+
+    /* =========================
+       TOP IMAGE
+    ========================= */
+
+    .hero-top-image {
+        width: 155px;
+        height: 155px;
+    }
+
+
+    /* =========================
+       HERO BOTTOM
+    ========================= */
+
+    .hero-bottom {
+        grid-template-columns: 1fr 1.3fr 1fr;
+
+        gap: 20px;
+
+        margin-top: 15px;
+    }
+
+
+    /* =========================
+       CARDS
+    ========================= */
+
+    .hero-card {
+        min-height: 190px;
+    }
+
+    .hero-card h3 {
+        font-size: 21px;
+    }
+
+    .hero-card p {
+        font-size: 15px;
+    }
+
+
+    /* =========================
+       CENTER IMAGE
+    ========================= */
+
+    .hero-image {
+        height: 400px;
+    }
+
+
+    /* =========================
+       NUMBER
+    ========================= */
+
+    .card-number {
+        top: 25px;
+        right: 18px;
+
+        font-size: 36px;
+    }
+
+
+    /* =========================
+       STAT
+    ========================= */
+
+    .stat-card {
+        min-height: 120px;
+    }
+
+    .stat-card h2 {
+        font-size: 37px;
+    }
+
+    .stat-card p {
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   768px AND BELOW
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 55px 6% 60px;
+    }
+
+
+    /* =========================
+       HERO TOP
+    ========================= */
+
+    .hero-top {
+        width: 100%;
+
+        min-height: auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 30px;
+
+        padding-top: 20px;
+    }
+
+
+    /* =========================
+       MAIN CONTENT
+    ========================= */
+
+    .hero-content {
+        width: 100%;
+
+        left: 0;
+
+        text-align: center;
+
+        order: 1;
+    }
+
+
+    .hero-content h1 {
+        width: 100%;
+
+        font-size: clamp(40px, 9vw, 58px);
+
+        line-height: 1.02;
+
+        letter-spacing: -2.5px;
+    }
+
+
+    /* =========================
+       TOP IMAGE
+    ========================= */
+
+    .hero-top-image {
+        width: 145px;
+        height: 145px;
+
+        order: 2;
+
+        margin-top: 5px;
+    }
+
+
+    /* =========================
+       CIRCLE
+    ========================= */
+
+    .hero-circle {
+        width: 135px;
+        height: 135px;
+
+        left: -35px;
+        top: -10px;
+
+        opacity: 0.95;
+    }
+
+
+    .circle-text-svg {
+        width: 135px;
+        height: 135px;
+    }
+
+
+    .circle-text-svg-content {
+        font-size: 12px;
+
+        font-weight: 600;
+
+        letter-spacing: 0.5px;
+    }
+
+
+    /* =========================
+       CIRCLE ARROW
+    ========================= */
+
+    .circle-arrow {
+        width: 38px;
+        height: 58px;
+    }
+
+
+    .circle-arrow svg {
+        width: 34px;
+        height: 55px;
+    }
+
+
+    /* =========================
+       HERO BOTTOM
+    ========================= */
+
+    .hero-bottom {
+        width: 100%;
+
+        margin-top: 45px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+
+    /* =========================
+       LEFT / RIGHT COLUMN
+    ========================= */
+
+    .hero-left,
+    .hero-right {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+
+    /* =========================
+       CENTER IMAGE
+    ========================= */
+
+    .hero-image {
+        width: 100%;
+
+        height: 380px;
+
+        order: 1;
+    }
+
+
+    /* =========================
+       LEFT SIDE CARDS
+    ========================= */
+
+    .hero-left {
+        order: 2;
+    }
+
+
+    /* =========================
+       RIGHT SIDE CARDS
+    ========================= */
+
+    .hero-right {
+        order: 3;
+    }
+
+
+    /* =========================
+       COMMON CARD
+    ========================= */
+
+    .hero-card {
+        width: 100%;
+
+        min-height: 190px;
+
+        border-radius: 14px;
+    }
+
+
+    /* =========================
+       REMOVE STRONG 3D ON MOBILE
+    ========================= */
+
+    .hero-card:hover {
+        transform: translateY(-5px) scale(1.01);
+
+        box-shadow:
+            0 12px 25px rgba(0, 0, 0, 0.45),
+            0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+
+    /* =========================
+       CARD HEADING
+    ========================= */
+
+    .hero-card h3 {
+        font-size: 22px;
+
+        line-height: 1.2;
+    }
+
+
+    /* =========================
+       CARD PARAGRAPH
+    ========================= */
+
+    .hero-card p {
+        font-size: 16px;
+
+        line-height: 1.4;
+    }
+
+
+    /* =========================
+       CARD NUMBER
+    ========================= */
+
+    .card-number {
+        top: 25px;
+
+        right: 20px;
+
+        font-size: 38px;
+    }
+
+
+    /* =========================
+       WEEKLY CARD
+    ========================= */
+
+    .weekly-card {
+        min-height: 200px;
+    }
+
+
+    /* =========================
+       TARGET ICON
+    ========================= */
+
+    .target-icon {
+        width: 60px;
+        height: 60px;
+
+        margin-bottom: 15px;
+    }
+
+
+    .target-circle {
+        width: 45px;
+        height: 45px;
+    }
+
+
+    .target-circle::before {
+        width: 26px;
+        height: 26px;
+    }
+
+
+    .target-dot {
+        width: 8px;
+        height: 8px;
+    }
+
+
+    /* =========================
+       TARGET ARROW
+    ========================= */
+
+    .target-arrow {
+        right: 5px;
+
+        top: -22px;
+
+        font-size: 43px;
+    }
+
+
+    /* =========================
+       STAT CARD
+    ========================= */
+
+    .stat-card {
+        min-height: 125px;
+    }
+
+
+    .stat-card h2 {
+        font-size: 40px;
+    }
+
+
+    .stat-card p {
+        font-size: 16px;
+    }
+
+
+    /* =========================
+       HAPPY CLIENT
+    ========================= */
+
+    .happy-card {
+        min-height: 95px;
+
+        gap: 12px;
+    }
+
+
+    .client-circle {
+        width: 55px;
+        height: 55px;
+
+        margin-left: -12px;
+
+        border-width: 2px;
+    }
+
+
+    .happy-card > span {
+        font-size: 15px;
+    }
+
+
+    /* =========================
+       HERO GET IN TOUCH
+    ========================= */
+
+    .hero-get-touch {
+        min-width: 180px;
+
+        height: 55px;
+
+        padding: 6px 7px 6px 24px;
+
+        font-size: 15px;
+    }
+
+
+    .hero-arrow {
+        width: 42px;
+        height: 42px;
+
+        font-size: 22px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   480px AND BELOW
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .hero {
+        padding: 45px 5% 50px;
+    }
+
+
+    /* =========================
+       HERO TOP
+    ========================= */
+
+    .hero-top {
+        gap: 25px;
+
+        padding-top: 15px;
+    }
+
+
+    /* =========================
+       HEADING
+    ========================= */
+
+    .hero-content h1 {
+        font-size: clamp(34px, 10vw, 48px);
+
+        line-height: 1.04;
+
+        letter-spacing: -1.8px;
+    }
+
+
+    /* =========================
+       CIRCLE
+    ========================= */
+
+    .hero-circle {
+        width: 110px;
+        height: 110px;
+
+        left: -32px;
+        top: -5px;
+    }
+
+
+    .circle-text-svg {
+        width: 110px;
+        height: 110px;
+    }
+
+
+    .circle-text-svg-content {
+        font-size: 10px;
+
+        letter-spacing: 0.35px;
+    }
+
+
+    /* =========================
+       CIRCLE ARROW
+    ========================= */
+
+    .circle-arrow {
+        width: 32px;
+        height: 48px;
+    }
+
+
+    .circle-arrow svg {
+        width: 29px;
+        height: 45px;
+    }
+
+
+    /* =========================
+       TOP IMAGE
+    ========================= */
+
+    .hero-top-image {
+        width: 125px;
+        height: 125px;
+    }
+
+
+    /* =========================
+       BOTTOM
+    ========================= */
+
+    .hero-bottom {
+        margin-top: 35px;
+
+        gap: 16px;
+    }
+
+
+    .hero-left,
+    .hero-right {
+        gap: 16px;
+    }
+
+
+    /* =========================
+       IMAGE
+    ========================= */
+
+    .hero-image {
+        height: 300px;
+    }
+
+
+    /* =========================
+       CARDS
+    ========================= */
+
+    .hero-card {
+        min-height: 175px;
+
+        border-radius: 12px;
+    }
+
+
+    .hero-card h3 {
+        font-size: 20px;
+    }
+
+
+    .hero-card p {
+        font-size: 15px;
+    }
+
+
+    /* =========================
+       CARD NUMBER
+    ========================= */
+
+    .card-number {
+        top: 20px;
+
+        right: 16px;
+
+        font-size: 34px;
+    }
+
+
+    /* =========================
+       WEEKLY
+    ========================= */
+
+    .weekly-card {
+        min-height: 180px;
+    }
+
+
+    /* =========================
+       TARGET
+    ========================= */
+
+    .target-icon {
+        width: 55px;
+        height: 55px;
+
+        margin-bottom: 12px;
+    }
+
+
+    .target-circle {
+        width: 42px;
+        height: 42px;
+
+        border-width: 2.5px;
+    }
+
+
+    .target-circle::before {
+        width: 24px;
+        height: 24px;
+
+        border-width: 2.5px;
+    }
+
+
+    .target-arrow {
+        right: 2px;
+
+        top: -20px;
+
+        font-size: 39px;
+    }
+
+
+    /* =========================
+       STAT
+    ========================= */
+
+    .stat-card {
+        min-height: 115px;
+    }
+
+
+    .stat-card h2 {
+        font-size: 36px;
+    }
+
+
+    .stat-card p {
+        font-size: 15px;
+    }
+
+
+    /* =========================
+       HAPPY CLIENT
+    ========================= */
+
+    .happy-card {
+        min-height: 85px;
+
+        gap: 10px;
+    }
+
+
+    .client-circle {
+        width: 48px;
+        height: 48px;
+
+        margin-left: -10px;
+    }
+
+
+    .happy-card > span {
+        font-size: 14px;
+    }
+
+
+    /* =========================
+       BUTTON
+    ========================= */
+
+    .hero-get-touch {
+        min-width: 170px;
+
+        height: 52px;
+
+        padding-left: 22px;
+
+        font-size: 14px;
+    }
+
+
+    .hero-arrow {
+        width: 39px;
+        height: 39px;
+
+        font-size: 21px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   360px AND BELOW
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .hero {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+
+    /* =========================
+       HEADING
+    ========================= */
+
+    .hero-content h1 {
+        font-size: 32px;
+
+        letter-spacing: -1.3px;
+    }
+
+
+    /* =========================
+       CIRCLE
+    ========================= */
+
+    .hero-circle {
+        width: 95px;
+        height: 95px;
+
+        left: -28px;
+    }
+
+
+    .circle-text-svg {
+        width: 95px;
+        height: 95px;
+    }
+
+
+    .circle-text-svg-content {
+        font-size: 8.5px;
+
+        letter-spacing: 0.25px;
+    }
+
+
+    /* =========================
+       TOP IMAGE
+    ========================= */
+
+    .hero-top-image {
+        width: 110px;
+        height: 110px;
+    }
+
+
+    /* =========================
+       IMAGE
+    ========================= */
+
+    .hero-image {
+        height: 260px;
+    }
+
+
+    /* =========================
+       CARDS
+    ========================= */
+
+    .hero-card {
+        min-height: 165px;
+    }
+
+
+    .hero-card h3 {
+        font-size: 18px;
+    }
+
+
+    .hero-card p {
+        font-size: 14px;
+    }
+
+
+    .card-number {
+        font-size: 30px;
+
+        top: 18px;
+
+        right: 14px;
+    }
+
+
+    /* =========================
+       TARGET
+    ========================= */
+
+    .target-arrow {
+        font-size: 35px;
+    }
+
+
+    /* =========================
+    HAPPY CLIENT
+    ========================= */
+
+    .client-circle {
+        width: 43px;
+        height: 43px;
+    }
+
+
+    .happy-card > span {
+        font-size: 13px;
+    }
+}
